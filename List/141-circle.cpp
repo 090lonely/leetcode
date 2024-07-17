@@ -23,7 +23,7 @@ public:
         ListNode* slow=head;
         ListNode* fast=head->next;
         while(slow!=fast){//两种情况：要么快慢指针相遇，说明有环的存在。
-            if(fast==nullptr|fast->next==nullptr){//要么fast遍历到链表的末尾，也就是已经结束，无环。
+            if(fast==nullptr || fast->next==nullptr){//要么fast遍历到链表的末尾，也就是已经结束，无环。
                 return false;
             }
             slow=slow->next;
